@@ -1,0 +1,64 @@
+//BASE
+@import "../base/base.scss";
+
+//MAIN
+@import "../main/header";
+@import "../main/info";
+@import "../main/about";
+@import "../main/projects";
+@import "../main/callback";
+@import "../main/contacts";
+@import "../main/footer";
+
+.border {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.block-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media(max-width: 768px){
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text-item {
+    width: 43%;
+
+    @media(max-width: 768px){
+      width: 80%;
+    }
+  }
+
+  &__title {
+    font-size: calc(24px + 24 * (100vw / 1280));
+    font-weight: 700;
+    line-height: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    width: 52%;
+
+    @media (max-width: 768px) {
+      font-size: calc(24 + (24 + 24 * 0.7) * ((100vw - 320px)));
+      line-height: 4rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    font-size: 1.375rem;
+    line-height: 2.5rem;
+
+    @media (max-width: 768px) {
+     text-align: center;
+     
+    }
+  }
+}
+
